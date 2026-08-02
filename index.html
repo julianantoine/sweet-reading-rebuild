@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sweet Reading — Orton-Gillingham Tutoring with Laura</title>
   <meta name="description" content="Personalized, multisensory Orton-Gillingham tutoring for children with dyslexia. Serving the Tri-State area of Cincinnati, Ohio. Online services also available." />
+  <meta name="theme-color" content="#c8553d" />
+  <link rel="canonical" href="https://julianantoine.github.io/sweet-reading-rebuild/" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sweet Reading" />
+  <meta property="og:title" content="Sweet Reading — Orton-Gillingham Tutoring with Laura" />
+  <meta property="og:description" content="Personalized, multisensory Orton-Gillingham tutoring for children with dyslexia. Serving the Tri-State area of Cincinnati, Ohio. Online services also available." />
+  <meta property="og:url" content="https://julianantoine.github.io/sweet-reading-rebuild/" />
+  <meta property="og:image" content="https://julianantoine.github.io/sweet-reading-rebuild/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sweet Reading — Orton-Gillingham Tutoring with Laura" />
+  <meta name="twitter:description" content="Personalized, multisensory Orton-Gillingham tutoring for children with dyslexia. Serving the Tri-State area of Cincinnati, Ohio. Online services also available." />
+  <meta name="twitter:image" content="https://julianantoine.github.io/sweet-reading-rebuild/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -26,7 +41,14 @@
         <a href="#stories">Stories</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a href="#contact" class="btn btn-primary">Book a free call</a>
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary">Book a free call</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -186,7 +208,7 @@
     </section>
 
     <!-- SIGNS OF DYSLEXIA -->
-    <section class="section signs">
+    <section id="signs" class="section signs">
       <div class="container">
         <p class="eyebrow center">Could it be dyslexia?</p>
         <h2 class="section-title center">Eight signs worth a closer look</h2>
@@ -275,19 +297,20 @@
           </p>
           <ul class="contact-list">
             <li><span>Email</span><a href="mailto:contactus@sweetreading.us">contactus@sweetreading.us</a></li>
+            <!-- TODO: swap (937) 555-0100 for Laura's real number before launch -->
             <li><span>Phone</span><a href="tel:+19375550100">(937) 555-0100</a></li>
             <li><span>Location</span>Tri-State area of Cincinnati, Ohio. Online Services is also available</li>
           </ul>
         </div>
 
-        <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-status').hidden = false;">
+        <form class="contact-form" id="contact-form">
           <label>
             Your name
-            <input type="text" name="name" required />
+            <input type="text" name="name" autocomplete="name" required />
           </label>
           <label>
             Email
-            <input type="email" name="email" required />
+            <input type="email" name="email" autocomplete="email" required />
           </label>
           <label>
             Child's grade
@@ -327,8 +350,8 @@
         <ul>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#signs">Signs of dyslexia</a></li>
-          <li><a href="#">School resources</a></li>
-          <li><a href="#">Reading list</a></li>
+          <li><a href="#contact">School resources</a></li>
+          <li><a href="#contact">Reading list</a></li>
         </ul>
       </div>
       <div>
@@ -349,5 +372,7 @@
   <button class="chat-bubble" aria-label="Chat with Laura">
     <span>💬</span> Chat with Laura
   </button>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
