@@ -425,11 +425,22 @@ section[id] { scroll-margin-top: 92px; }
   justify-content: center;
   box-shadow: var(--shadow);
 }
-.initials {
-  font-family: 'Fraunces', serif;
-  font-size: 96px;
-  color: var(--cream);
-  font-weight: 600;
+.photo-mat {
+  background: var(--cream);
+  border-radius: calc(var(--radius) - 4px);
+  margin: 14px;
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+.about-logo {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  display: block;
 }
 .photo-tag {
   margin-top: 16px;
