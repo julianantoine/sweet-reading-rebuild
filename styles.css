@@ -416,7 +416,7 @@ section[id] { scroll-margin-top: 92px; }
 .about-photo { text-align: center; }
 .photo-frame {
   width: 280px;
-  height: 320px;
+  height: 280px;
   margin: 0 auto;
   background: linear-gradient(160deg, #f7d8b5, #d68f6c);
   border-radius: var(--radius);
@@ -427,18 +427,18 @@ section[id] { scroll-margin-top: 92px; }
 }
 .photo-mat {
   background: var(--cream);
-  border-radius: calc(var(--radius) - 4px);
-  margin: 14px;
+  border-radius: calc(var(--radius) - 2px);
+  margin: 6px;
   flex: 1;
   align-self: stretch;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18px;
+  padding: 8px;
 }
 .about-logo {
-  max-width: 72%;
-  max-height: 72%;
+  max-width: 80%;
+  max-height: 80%;
   width: auto;
   height: auto;
   border-radius: 8px;
