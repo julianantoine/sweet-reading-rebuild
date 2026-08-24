@@ -61,9 +61,10 @@
         e.preventDefault();
         return;
       }
-      // Allow the real submission to FormSubmit.co to proceed (do NOT preventDefault).
+      // Let the native submission proceed (do NOT preventDefault). Disabling the
+      // button synchronously would cancel the default submit, so defer it.
       var btn = form.querySelector('button[type="submit"]');
-      if (btn) btn.disabled = true; // prevent double-submit
+      if (btn) setTimeout(function () { btn.disabled = true; }, 0);
     });
   }
 
