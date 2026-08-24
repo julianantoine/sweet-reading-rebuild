@@ -50,20 +50,20 @@
     });
   }
 
-  /* ---------- Contact form (static demo handler) ---------- */
+  /* ---------- Contact form ---------- */
+  // Form now submits to FormSubmit.co (see index.html action=). We remove the
+  // old static demo handler that called preventDefault() and never sent email.
   var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
       if (!form.checkValidity()) {
         form.reportValidity();
+        e.preventDefault();
         return;
       }
-      var status = form.querySelector('.form-status');
+      // Allow the real submission to FormSubmit.co to proceed (do NOT preventDefault).
       var btn = form.querySelector('button[type="submit"]');
-      if (status) status.hidden = false;
-      if (btn) btn.disabled = true;
-      form.reset();
+      if (btn) btn.disabled = true; // prevent double-submit
     });
   }
 
