@@ -371,36 +371,15 @@
           <div class="cal-card">
             <h3>Schedule online</h3>
             <p class="cal-note">Select an open time and you're booked.</p>
-            <!-- Cal.com embed for the Sweet Reading discovery call.
-                 The bootstrap IIFE below loads embed.js ONCE. A separate
-                 <script src=embed.js> tag must NOT be present — loading it
-                 twice throws "cal-modal-box already used" and blanks the calendar. -->
-            <script>
-              (function (C, A, L) {
-                var p = function (a, ar) { a.q.push(ar); };
-                var q = C.document;
-                C.Cal = C.Cal || function () {
-                  var cal = C.Cal;
-                  var ar = arguments;
-                  if (!cal.loaded) {
-                    cal.ns = {};
-                    cal.q = cal.q || [];
-                    q.head.appendChild(q.createElement("script")).src = "https://app.cal.com/embed/embed.js";
-                    cal.loaded = true;
-                  }
-                  ar[0] === L ? (function (api) { api.q = api.q || []; C.Cal.ns[L] = api; return api; })(cal) :
-                    (typeof ar[0] === "string" ? function (ns, v) { ns[v[0]] = v[1]; return cal; } : function (ns, obj) { for (var k in obj) ns[k] = obj[k]; return cal; })(cal.ns || (cal.ns = {}), ar[0]);
-                  return cal;
-                };
-              })(window, document, "Cal");
-              Cal("init", { origin: "https://app.cal.com" });
-              Cal("inline", {
-                elementOrSelector: "#cal-inline",
-                calLink: "julian-antoine-djigvi/sweetreading",
-                layout: "month_view"
-              });
-            </script>
-            <div id="cal-inline" class="cal-inline"></div>
+            <!-- Cal.com inline iframe embed (no JS loader — reliable) -->
+            <iframe
+              src="https://cal.com/julian-antoine-djigvi/sweetreading?embed=true&layout=month_view"
+              class="cal-inline"
+              loading="lazy"
+              title="Book a discovery call"
+              frameborder="0"
+              scrolling="no"
+              allowfullscreen></iframe>
           </div>
 
           <div class="questions-card">
