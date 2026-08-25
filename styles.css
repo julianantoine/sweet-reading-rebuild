@@ -322,7 +322,7 @@ section[id] { scroll-margin-top: 86px; }
 
 /* FOOTER */
 .site-footer { background: #1f2024; color: #cdcfd3; padding: 64px 0 28px; }
-.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
+.footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .site-footer h4 { color: #fff; font-family: 'Montserrat', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 16px; font-weight: 600; }
 .site-footer ul { display: flex; flex-direction: column; gap: 10px; }
 .site-footer a { color: #cdcfd3; font-size: 14px; }
