@@ -50,11 +50,11 @@
     });
   }
 
-  /* ---------- Contact form ---------- */
-  // Form now submits to FormSubmit.co (see index.html action=). We remove the
-  // old static demo handler that called preventDefault() and never sent email.
-  var form = document.getElementById('contact-form');
-  if (form) {
+  /* ---------- Contact + questions forms ---------- */
+  // Both forms submit to FormSubmit.co (see action= in index.html). The old
+  // static demo handler that called preventDefault() and never sent email is
+  // removed. Validation still runs; valid submits proceed to FormSubmit.
+  var attachFormSubmit = function (form) {
     form.addEventListener('submit', function (e) {
       if (!form.checkValidity()) {
         form.reportValidity();
@@ -66,7 +66,9 @@
       var btn = form.querySelector('button[type="submit"]');
       if (btn) setTimeout(function () { btn.disabled = true; }, 0);
     });
-  }
+  };
+  var forms = document.querySelectorAll('.contact-form');
+  for (var i = 0; i < forms.length; i++) attachFormSubmit(forms[i]);
 
   /* ---------- Subtle reveal-on-scroll ---------- */
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -319,6 +319,80 @@
       </div>
     </section>
 
+    <!-- BOOK A DISCOVERY CALL -->
+    <section id="book" class="section schedule">
+      <div class="container">
+        <p class="eyebrow center">Book a Discovery Call</p>
+        <h2 class="section-title center">Pick a time that works for you</h2>
+        <p class="section-lede">
+          Choose a free 30-minute slot below and we'll take it from there — no pressure, no commitment.
+        </p>
+
+        <div class="schedule-grid">
+          <div class="cal-card">
+            <h3>Schedule online</h3>
+            <p class="cal-note">Select an open time and you're booked.</p>
+            <!-- Cal.com embed. Replace the calLink with Laura's real Cal.com URL. -->
+            <script type="text/javascript" src="https://app.cal.com/embed/embed.js"></script>
+            <script>
+              (function (C, A, L) {
+                var p = function (a, ar) { a.q.push(ar); };
+                var q = C.document;
+                C.Cal = C.Cal || function () {
+                  var cal = C.Cal;
+                  var ar = arguments;
+                  if (!cal.loaded) {
+                    cal.ns = {};
+                    cal.q = cal.q || [];
+                    q.head.appendChild(q.createElement("script")).src = "https://app.cal.com/embed/embed.js";
+                    cal.loaded = true;
+                  }
+                  ar[0] === L ? (function (api) { api.q = api.q || []; C.Cal.ns[L] = api; return api; })(cal) :
+                    (typeof ar[0] === "string" ? function (ns, v) { ns[v[0]] = v[1]; return cal; } : function (ns, obj) { for (var k in obj) ns[k] = obj[k]; return cal; })(cal.ns || (cal.ns = {}), ar[0]);
+                  return cal;
+                };
+              })(window, document, "Cal");
+              Cal("init", { origin: "https://app.cal.com" });
+              Cal("inline", {
+                elementOrSelector: "#cal-inline",
+                calLink: "YOUR-SLUG/30min",
+                layout: "month_view"
+              });
+            </script>
+            <div id="cal-inline" class="cal-inline"></div>
+          </div>
+
+          <div class="questions-card">
+            <h3>Prefer to ask a question first?</h3>
+            <p>
+              Not ready to book yet? Send a note and we'll reply within one business day.
+            </p>
+            <form class="contact-form questions-form" id="questions-form" action="https://formsubmit.co/contactus@sweetreading.us" method="POST">
+              <!-- FormSubmit honeypot + options -->
+              <input type="text" name="_honey" style="display:none" />
+              <input type="hidden" name="_subject" value="Sweet Reading website question" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <label>
+                Your name
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label>
+                Your question
+                <textarea name="message" rows="4" required></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary">Send question</button>
+              <p class="form-status" hidden>Thanks — Laura Sweet will be in touch within one business day.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="section contact">
       <div class="container contact-grid">
@@ -332,7 +406,7 @@
           <ul class="contact-list">
             <li><span>Email</span><a href="mailto:contactus@sweetreading.us">contactus@sweetreading.us</a></li>
             <!-- TODO: swap (937) 555-0100 for Laura Sweet's real number before launch -->
-            <li><span>Phone</span><a href="tel:+19375550100">(937) 555-0100</a></li>
+            <li><span>Phone</span><a href="tel:+19379261618">(937) 926-1618</a></li>
             <li><span>Location</span>Tri-State area of Cincinnati, Ohio. Online Services is also available</li>
           </ul>
         </div>
@@ -397,7 +471,7 @@
         <h4>Contact</h4>
         <ul>
           <li><a href="mailto:contactus@sweetreading.us">contactus@sweetreading.us</a></li>
-          <li><a href="tel:+19375550100">(937) 555-0100</a></li>
+          <li><a href="tel:+19379261618">(937) 926-1618</a></li>
           <li>Tri-State area of Cincinnati, Ohio. Online Services is also available</li>
         </ul>
       </div>

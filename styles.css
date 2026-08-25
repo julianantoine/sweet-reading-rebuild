@@ -592,6 +592,57 @@ section[id] { scroll-margin-top: 92px; }
 .faq summary::-webkit-details-marker { display: none; }
 .faq details p { margin: 12px 0 0; font-size: 15px; }
 
+/* SCHEDULE (Book a Discovery Call) */
+.schedule { background: var(--bg); }
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 28px;
+  max-width: 1020px;
+  margin: 0 auto;
+  align-items: start;
+}
+.cal-card,
+.questions-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+.cal-card h3,
+.questions-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.cal-note {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+.cal-inline {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #fff;
+  min-height: 420px;
+}
+.questions-card p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+/* Reuse contact-form styling on a light background (override dark colors) */
+.questions-card .contact-form {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 24px;
+}
+.questions-card .contact-form label {
+  color: var(--accent-deep);
+}
+.questions-card .form-status { color: var(--accent-deep); }
+
 /* CONTACT */
 .contact { background: var(--ink); color: var(--cream); }
 .contact .section-title, .contact .lede, .contact .eyebrow { color: var(--cream); }
@@ -756,7 +807,8 @@ section[id] { scroll-margin-top: 92px; }
   .nav-toggle { display: flex; }
   .hero-grid,
   .about-grid,
-  .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid,
+  .schedule-grid { grid-template-columns: 1fr; }
   .method-grid,
   .services-grid,
   .testimonials-grid { grid-template-columns: 1fr; }
