@@ -371,8 +371,10 @@
           <div class="cal-card">
             <h3>Schedule online</h3>
             <p class="cal-note">Select an open time and you're booked.</p>
-            <!-- Cal.com embed for the Sweet Reading discovery call -->
-            <script type="text/javascript" src="https://app.cal.com/embed/embed.js"></script>
+            <!-- Cal.com embed for the Sweet Reading discovery call.
+                 The bootstrap IIFE below loads embed.js ONCE. A separate
+                 <script src=embed.js> tag must NOT be present — loading it
+                 twice throws "cal-modal-box already used" and blanks the calendar. -->
             <script>
               (function (C, A, L) {
                 var p = function (a, ar) { a.q.push(ar); };
